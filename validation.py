@@ -235,7 +235,6 @@ def validate_autoattack(test_loader, model, eps, configs):
         test_images.append(images)
         test_labels.append(labels)
 
-    # 将列表中的数据合并为一个大的张量或数组
     test_images = torch.cat(test_images, dim=0)
     test_labels = torch.cat(test_labels, dim=0)
     adversary = AutoAttack(model, norm='Linf', eps=eps, attacks_to_run=['apgd-ce', 'apgd-dlr', 'fab', 'square'], version='custom')
