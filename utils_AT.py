@@ -138,7 +138,6 @@ def test_adv_auto(net, adversary, test_loader):
         test_images.append(images)
         test_labels.append(labels)
 
-    # 将列表中的数据合并为一个大的张量或数组
     test_images = torch.cat(test_images, dim=0)
     test_labels = torch.cat(test_labels, dim=0)
 
