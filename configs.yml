@@ -37,7 +37,7 @@ ADV:
     # PGD attack parameters used during validation
     # the same clip_eps as above is used for PGD
     pgd_attack: 
-    - !!python/tuple [20, 2.0] #[10 iters, 8.0/255.0], 改动：zkj
+    - !!python/tuple [20, 2.0] #[10 iters, 8.0/255.0], 
     - !!python/tuple [100, 2.0] #[50 iters, 8.0/255.0]
     
 DATA:
