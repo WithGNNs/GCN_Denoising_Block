@@ -1,10 +1,10 @@
 Operation:
     #Name
-    Prefix: 'AT_WRN32_10'
+    Prefix: 'AT_WRN32_10_GNN_1'
     #Train
     Train: False
     #Resume
-    Resume: False
+    Resume: True
     #Validate
     Validate: True
 TRAIN:
@@ -28,17 +28,17 @@ TRAIN:
     
 ADV:
     # FGSM parameters during training
-    clip_eps: 8
+    clip_eps: 4
     fgsm_step: 8
 
     # Number of repeats for free adversarial training
-    n_repeats: 4
+    n_repeats: 8
 
     # PGD attack parameters used during validation
     # the same clip_eps as above is used for PGD
     pgd_attack: 
-    - !!python/tuple [20, 8.0] #[10 iters, 8.0/255.0], 改动：zkj
-    - !!python/tuple [100, 8.0] #[50 iters, 8.0/255.0]
+    - !!python/tuple [20, 2.0] #[10 iters, 8.0/255.0], 改动：zkj
+    - !!python/tuple [100, 2.0] #[50 iters, 8.0/255.0]
     
 DATA:
     # Number of data workers

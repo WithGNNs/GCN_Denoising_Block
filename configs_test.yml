@@ -1,0 +1,18 @@
+Operation:
+    #Name
+    Prefix: 'WRN_32_10'
+    #Validate Best
+    Validate_Best: True
+    #Validate Last
+    Validate_Last: False
+ADV:
+    # FGSM parameters during training
+    clip_eps: 16
+    fgsm_step: 8
+
+    # PGD attack parameters used during validation
+    # the same clip_eps as above is used for PGD
+    pgd_attack_1: 20
+    pgd_attack_2: 100
+
+    

@@ -1,0 +1,20 @@
+Operation:
+    #Name
+    Prefix: 'WRN32_10_GNN_1'
+    #record
+    record_words: '##### WRN32_10_GNN_! with simple training #####'
+    #Resume
+    Resume: False
+    #Validate
+    Validate: True
+ADV:
+    # FGSM parameters during training
+    clip_eps: 8
+    fgsm_step: 8
+
+    # PGD attack parameters used during validation
+    # the same clip_eps as above is used for PGD
+    pgd_attack_1: 20
+    pgd_attack_2: 100
+
+    
