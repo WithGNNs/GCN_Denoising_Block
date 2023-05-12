@@ -1,6 +1,6 @@
 Operation:
     #Name
-    Prefix: 'AT_res_18_GNN_4_k_5'
+    Prefix: 'AT_WRN32_10'
     #Train
     Train: False
     #Resume
