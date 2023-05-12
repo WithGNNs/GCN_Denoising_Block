@@ -50,7 +50,6 @@ class Dataset_ImageNet(torch.utils.data.Dataset):
         return len(self.image)
 
 class Accumulator:
-    """在n个变量上累加"""
     def __init__(self,n):
         self.data = [0.0]*n  
 
@@ -139,11 +138,6 @@ def accuracy_imagenet1k(model,input_path,image_id_list,label_list,batch_size=20,
     return acc/(batch_size*num_batches)
 
 def Get_edge_pyg(A):
-  """
-    Input: 邻接矩阵(weighted or not weighted)
-    process: 转化为具有权重的邻接矩阵形式,(.row, .col为连边, values为权重)
-    return: 返回pyg所需要的edge形式, 边, 边特征
-  """
   edge_index_temp = sp.coo_matrix(A)
   values = edge_index_temp.data  # 对应权重值weight
   indices = np.vstack((edge_index_temp.row, edge_index_temp.col))  
